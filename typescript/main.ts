@@ -8,6 +8,8 @@ class Student{
 }
 
 //test code
+//Create a new instance, creating an object,
+//instantiating an object
 let testStu:Student = new Student();
 testStu.firstName = "Joe"; 
 testStu.lastName = "Ortiz";
@@ -25,13 +27,17 @@ function registerStudent(){
     displayStudent(nextStudent);
 }
 
+/**
+ * Gets user input from the form and 
+ * warps it in a student object
+ */
 function getStudent():Student{
     let s = new Student();
     s.firstName = (<HTMLInputElement>
         document.getElementById("first-name")).value;
 
-        s.lastName = (<HTMLInputElement>
-            document.getElementById("last-name")).value;
+    s.lastName = (<HTMLInputElement>
+        document.getElementById("last-name")).value;
         //TODO: get date of birth
     return s;
 }
